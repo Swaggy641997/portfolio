@@ -1,102 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Natanel Netsanet | Frontend Developer</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdTech Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">Natanel</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="#contact" class="btn">Let's Talk</a>
-    </div>
-  </header>
+    <div class="dashboard-container">
+        <!-- Navigation Header -->
+        <nav class="nav-header">
+            <div class="nav-brand">
+                <h1>EdTech</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="#" class="nav-item active">Dashboard</a>
+                <a href="#" class="nav-item">Activity</a>
+                <a href="#" class="nav-item">Teachers</a>
+                <a href="#" class="nav-item">Events</a>
+                <a href="#" class="nav-item">Payments</a>
+                <a href="#" class="nav-item">Parent's Guide</a>
+            </div>
+            <div class="nav-profile">
+                <div class="notification-icon">🔔</div>
+                <div class="profile-dropdown">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b372?w=40&h=40&fit=crop&crop=face" alt="Isabella Lewis" class="profile-image">
+                    <span class="profile-name">Isabella Lewis</span>
+                    <span class="dropdown-arrow">▼</span>
+                </div>
+            </div>
+        </nav>
 
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h2>Hey! I’m Natanel</h2>
-        <h3>I’m a Web Developer</h3>
-        <p>I build clean, responsive websites for portfolios, businesses, and online stores using HTML, CSS, and JavaScript.</p>
-        <div class="social-links">
-          <a href="https://web.facebook.com/Nat ty"><img src="photo/facebook (3).png" alt="Facebook"></a>
-          <a href="https://x.com/swagyyg3"><img src="photo/twitter (4).png" alt="Twitter"></a>
-          <a href="www.linkedin.com/in/nati_fe"><img src="photo/linkedin.png" alt="LinkedIn"></a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="photo/photo_2025-07-20_01-38-53.jpg" alt="Natanel Netsanet" />
-      </div>
-    </div>
-  </section>
+        <!-- Main Dashboard Content -->
+        <main class="dashboard-main">
+            <!-- Left Section -->
+            <div class="left-section">
+                <!-- Grade Success Section -->
+                <div class="grade-section">
+                    <div class="grade-content">
+                        <h2 class="grade-title">Keep <span class="highlight">Your</span><br>Children's Success</h2>
+                        <p class="grade-subtitle">Grading in education</p>
+                        <div class="grade-display">
+                            <span class="grade-letter">C,</span>
+                            <span class="grade-percentage">87%</span>
+                        </div>
+                        <p class="grade-update">Latest update added: <strong>January 29</strong></p>
+                    </div>
+                    
+                    <!-- GPA Chart -->
+                    <div class="gpa-section">
+                        <div class="gpa-header">
+                            <h3>Average GPA</h3>
+                            <div class="time-filters">
+                                <button class="time-filter">Previous week</button>
+                                <button class="time-filter">Previous week</button>
+                                <button class="time-filter active">January</button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="gpaChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2>I Am Available For Web Development Projects</h2>
-      <p>I’m a beginner web developer passionate about creating fast and user-friendly websites. I’m looking to work with clients who need websites for their business or personal use.</p>
-    </div>
-  </section>
+                <!-- Upcoming Tests -->
+                <div class="upcoming-tests">
+                    <div class="section-header">
+                        <h3>Upcoming Tests</h3>
+                        <div class="test-day-toggle">
+                            <span>Test Day</span>
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>📅</span>
+                        </div>
+                    </div>
+                    <div class="test-calendar">
+                        <div class="test-day">
+                            <div class="day-number">22</div>
+                            <div class="day-name">Monday</div>
+                        </div>
+                        <div class="test-day active">
+                            <div class="day-number">23</div>
+                            <div class="day-name">Tuesday</div>
+                            <div class="subject">Math</div>
+                        </div>
+                        <div class="test-day active">
+                            <div class="day-number">24</div>
+                            <div class="day-name">Wednesday</div>
+                            <div class="subject">Art</div>
+                        </div>
+                        <div class="test-day">
+                            <div class="day-number">25</div>
+                            <div class="day-name">Thursday</div>
+                        </div>
+                        <div class="test-day">
+                            <div class="day-number">26</div>
+                            <div class="day-name">Friday</div>
+                            <div class="decorative-element">✦</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Recent Projects</h2>
-      <div class="project-list">
-        <div class="project">
-          <img src="photo/Screenshot 2025-07-20 110119.png" alt="Cafe Website">
-          <h3>Cafe Website</h3>
-          <a href="projects/cafe/index.html" class="btn-sm">View Project</a>
-        </div>
-        <div class="project">
-          <img src="photo/Screenshot 2025-07-20 110206.png" alt="Online Store">
-          <h3>Online Store</h3>
-          <a href="projects/store/index.html" class="btn-sm">View Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
+            <!-- Right Section -->
+            <div class="right-section">
+                <!-- Parents' Contacts -->
+                <div class="contacts-section">
+                    <div class="section-header">
+                        <h3>Parents' Contacts</h3>
+                    </div>
+                    <p class="section-subtitle">Here you can see parents and their contacts.</p>
+                    <div class="contacts-list">
+                        <div class="contact-item">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b372?w=40&h=40&fit=crop&crop=face" alt="Isabella Lewis" class="contact-avatar">
+                            <div class="contact-info">
+                                <div class="contact-name">Isabella Lewis</div>
+                                <div class="contact-role">Psychologist</div>
+                            </div>
+                            <div class="contact-phone">+1 408 461 5925</div>
+                        </div>
+                        <div class="contact-item">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Samuel Adamson" class="contact-avatar">
+                            <div class="contact-info">
+                                <div class="contact-name">Samuel Adamson</div>
+                                <div class="contact-role">Mathematics</div>
+                            </div>
+                            <div class="contact-phone">+1 408 831 5372</div>
+                        </div>
+                        <div class="contact-item">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="Olivia Smith" class="contact-avatar">
+                            <div class="contact-info">
+                                <div class="contact-name">Olivia Smith</div>
+                                <div class="contact-role">Art</div>
+                            </div>
+                            <div class="contact-phone">+1 408 952 4284</div>
+                        </div>
+                    </div>
+                    <button class="show-all-btn">Show all</button>
+                </div>
 
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Design Services I Am Providing</h2>
-      <ul class="service-list">
-        <li>Website Design</li>
-        <li>Landing Pages</li>
-        <li>Responsive Design</li>
-        <li>HTML/CSS Bug Fixing</li>
-      </ul>
-    </div>
-  </section>
+                <!-- Today's Schedule -->
+                <div class="schedule-section">
+                    <h3>Today's Schedule</h3>
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <div class="schedule-time">8:45 AM - 10:10 AM</div>
+                            <div class="schedule-subject">English Language Arts</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">10:15 AM - 10:54 AM</div>
+                            <div class="schedule-subject">Physical Education</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">10:57 AM - 11:37 AM</div>
+                            <div class="schedule-subject">Mathematics</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">11:40 AM - 12:20 PM</div>
+                            <div class="schedule-subject">Lunch & Advisory</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">12:25 PM - 1:05 PM</div>
+                            <div class="schedule-subject">Enrichment</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">1:06 AM - 1:47 AM</div>
+                            <div class="schedule-subject">Science</div>
+                        </div>
+                    </div>
+                </div>
 
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Get in Touch</h2>
-      <form action="#">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+                <!-- Recent Events -->
+                <div class="events-section">
+                    <div class="section-header">
+                        <h3>Recent Events</h3>
+                        <button class="show-all-btn">Show all</button>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Connor Ellington">
+                        </div>
+                        <div class="event-content">
+                            <div class="event-header">
+                                <span class="event-name">Connor Ellington</span>
+                                <span class="event-time">January 27, 1:43 PM</span>
+                            </div>
+                            <div class="event-role">Teacher Coordinator</div>
+                            <div class="event-title">Book Fair</div>
+                            <div class="event-description">Join us on March 15 for our Book Fair! Explore captivating reads for the entire family, seize the opportunity to enrich...</div>
+                            <div class="event-stats">
+                                <span class="rating">⭐ 4.7</span>
+                                <span class="likes">❤️ 5</span>
+                                <span class="views">👁️ 5</span>
+                                <span class="comments">💬 29 comments</span>
+                            </div>
+                            <button class="add-calendar-btn">📅 Add to calendar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-  </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Natanel Netsanet. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
